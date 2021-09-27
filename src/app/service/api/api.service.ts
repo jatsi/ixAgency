@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  url:string="http://localhost:8000/api/auth/"
+  url:string="https://apirest24.herokuapp.com/api/auth/"
   constructor(private http:HttpClient) { }
 
   loginByemail(form:LoginI):Observable<ResponseI>{
