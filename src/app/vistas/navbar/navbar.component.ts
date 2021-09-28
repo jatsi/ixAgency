@@ -34,27 +34,7 @@ export class NavbarComponent implements OnInit {
 
   }
   onColor(form: any) {
-
-    this.elementRef.nativeElement.ownerDocument
-      .body.style.backgroundColor = form.color;
-
-
-    let rawFontColor = form.color.substring(1, form.color.length());
-    var rgb = parseInt(rawFontColor, 16);   // convert rrggbb to decimal
-    var r = (rgb >> 16) & 0xff;  // extract red
-    var g = (rgb >> 8) & 0xff;  // extract green
-    var b = (rgb >> 0) & 0xff;  // extract blue
-
-    var luma = 0.2126 * r + 0.7152 * g + 0.0722 * b; // per ITU-R BT.709
-
-    if (luma < 40) {
-      this.elementRef.nativeElement.ownerDocument
-        .body.style.backgroundColor = "#84c732";  // pick a different colour
-    }else{
-      this.elementRef.nativeElement.ownerDocument
-      .body.style.backgroundColor = "#348feb"; 
-    }
-
+    this.dataSharingService.color.next(form.color.toString());
   }
 
   onLogout() {

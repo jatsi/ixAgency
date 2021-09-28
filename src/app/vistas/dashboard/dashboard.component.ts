@@ -9,10 +9,17 @@ import { UpdateService } from 'src/app/service/updateComponent/update.service';
 })
 export class DashboardComponent implements OnInit {
   isUserLoggedIn: boolean=false;
+  color: any = "";
+
+
   constructor(private dataSharingService:UpdateService, private router:Router) {
     this.dataSharingService.isUserLoggedIn.subscribe( value => {
       this.isUserLoggedIn = value;
   });
+  this.dataSharingService.color.subscribe(value => {
+    this.color = value;
+  });
+
    }
 
   ngOnInit(): void {

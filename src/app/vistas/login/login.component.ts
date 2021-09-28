@@ -46,6 +46,6 @@ errorMsj:any="";
     })
   }
   Successlogin() {
-    Swal.fire('Success', 'Log In', 'success')
+    Swal.fire('Success', 'Login', 'success')
 }
 }

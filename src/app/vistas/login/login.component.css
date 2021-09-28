@@ -69,7 +69,7 @@ a {
   
   /* FORM TYPOGRAPHY*/
   
-  input[type=button], input[type=submit], input[type=reset]  {
+  input[type=button], input[type=submit], input[type=reset] ,button {
     background-color: #56baed;
     border: none;
     color: white;

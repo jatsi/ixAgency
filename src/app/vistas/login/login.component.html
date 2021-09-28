@@ -12,7 +12,7 @@
       <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
         <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email" formControlName="email">
         <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password" formControlName="password">
-        <input type="submit" class="fadeIn fourth" value="Log In">
+        <button type="submit" class="fadeIn fourth" >Sign In</button>
       </form>
   
       <!-- Remind Passowrd -->
