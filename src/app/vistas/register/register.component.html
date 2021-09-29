@@ -9,7 +9,7 @@
       </div>
   
       <!-- Login Form -->
-      <form [formGroup]="registerForm" (ngSubmit)="onRegister(registerForm.value)">
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister(registerForm.value)" novalidate>
         <input type="text" id="name" class="fadeIn second" name="name" placeholder="Name" formControlName="name" required>
         <div *ngIf="myForm.controls['name'].invalid && (myForm.controls['name'].dirty || myForm.controls['name'].touched)" class="alert">
 
