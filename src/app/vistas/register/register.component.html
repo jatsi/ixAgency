@@ -11,16 +11,6 @@
       <!-- Login Form -->
       <form [formGroup]="registerForm" (ngSubmit)="onRegister(registerForm.value)">
         <input type="text" id="name" class="fadeIn second" name="name" placeholder="Name" formControlName="name" required>
-        <div *ngIf="formGroup.get('name').invalid && 
-        formGroup.get('name').errors && 
-        (formGroup.get('name').dirty || formGroup.get('name').touched)">
-    <small class="text-danger"
-        *ngIf="formGroup.get('name').hasError('required')">
-        This field is required.
-    </small>
-          </div>
-
-        </div>
         <input type="email" id="username" class="fadeIn second" name="username" placeholder="Email" formControlName="email" required>
         <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" formControlName="password" required>
         <input type="password" id="passwordC" class="fadeIn third" name="passwordC" placeholder="Confirm password" formControlName="password_confirmation" required>
