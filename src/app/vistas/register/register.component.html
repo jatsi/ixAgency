@@ -10,10 +10,10 @@
   
       <!-- Login Form -->
       <form [formGroup]="registerForm" (ngSubmit)="onRegister(registerForm.value)">
-        <input type="text" id="name" class="fadeIn second" name="name" placeholder="Name" formControlName="name">
-        <input type="text" id="username" class="fadeIn second" name="username" placeholder="Email" formControlName="email">
-        <input type="text" id="password" class="fadeIn third" name="password" placeholder="Password" formControlName="password">
-        <input type="text" id="passwordC" class="fadeIn third" name="passwordC" placeholder="Confirm password" formControlName="password_confirmation">
+        <input type="text" id="name" class="fadeIn second" name="name" placeholder="Name" formControlName="name" required>
+        <input type="email" id="username" class="fadeIn second" name="username" placeholder="Email" formControlName="email" required>
+        <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" formControlName="password" required>
+        <input type="password" id="passwordC" class="fadeIn third" name="passwordC" placeholder="Confirm password" formControlName="password_confirmation" required>
         <input type="submit" class="fadeIn fourth" value="Sign Up">
       </form>
   
