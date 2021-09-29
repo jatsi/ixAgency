@@ -11,7 +11,25 @@
       <!-- Login Form -->
       <form [formGroup]="registerForm" (ngSubmit)="onRegister(registerForm.value)">
         <input type="text" id="name" class="fadeIn second" name="name" placeholder="Name" formControlName="name" required>
+        <div *ngIf="myForm.controls['name'].invalid && (myForm.controls['name'].dirty || myForm.controls['name'].touched)" class="alert">
+
+          <div *ngIf="myForm.controls['name'].errors.required">
+
+          Please enter name
+
+        </div>
+
+      </div>
         <input type="email" id="username" class="fadeIn second" name="username" placeholder="Email" formControlName="email" required>
+        <div *ngIf="myForm.controls['username'].invalid && (myForm.controls['username'].dirty || myForm.controls['username'].touched)" class="alert">
+
+          <div *ngIf="myForm.controls['username'].errors.required">
+
+          Please enter username
+
+        </div>
+
+      </div>
         <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password" formControlName="password" required>
         <input type="password" id="passwordC" class="fadeIn third" name="passwordC" placeholder="Confirm password" formControlName="password_confirmation" required>
         <input type="submit" class="fadeIn fourth" value="Sign Up">

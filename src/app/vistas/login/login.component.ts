@@ -14,8 +14,8 @@ import { UpdateService } from 'src/app/service/updateComponent/update.service';
 export class LoginComponent implements OnInit {
 
   loginForm = new FormGroup({
-    email: new FormControl('Campo requerido', Validators.required),
-    password: new FormControl('Campo requerido', Validators.required)
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
   })
 
   constructor(private api: ApiService, private router: Router, private dataSharingService:UpdateService) {
